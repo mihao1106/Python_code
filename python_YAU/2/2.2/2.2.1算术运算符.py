@@ -1,0 +1,28 @@
+#2.2.1算术运算符
+print(3 + 5)
+print([2,3,4] + [5,6,7])
+print((1,2,3) + (4,))
+print('adcd' + '123')
+print(5 - 2)
+print(2 - 5)
+print({2,3,4} - {1,2,4})
+print(3 * (3 + 4j))
+print([1,2,3] * 3)
+print((1,2,3) * 3)
+print({1,2,3} * 3)
+
+print(5 / 2)
+print(17 // 4)
+print(17.0 // 4)
+print(-17 // 4)
+
+print(789 % 23)
+print(-17 % 4)
+print(17 % -4)
+print('%c,%d' % (65,65))
+print('%a,%d' % (45,65))
+
+print(3 ** 2)
+print(8 ** (1/3))
+print(9 ** 0.5)
+print((-1) ** 0.5)

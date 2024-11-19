@@ -1,0 +1,17 @@
+#3.1.5内置函数对列表的操作
+x = list(range(11))
+print(x)
+import random
+random.shuffle(x)
+print(x)
+print(all(x))
+print(any(x))
+print(max(x))
+print(min(x))
+print(max(x,key = str))
+print(sum(x))
+print(len(x))
+print(list(zip(x,[1]*11)))
+print(list(zip(['a','b','c'],['1','2'])))
+print(list(enumerate(x)))
+print(list('董付国'.encode()))
