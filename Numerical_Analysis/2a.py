@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 '''
 
 输出说明
@@ -14,8 +13,7 @@
 
 '''
 
-=======
->>>>>>> origin/master
+
 import math
 
 # 已知的拉格朗日插值点： (角度（弧度），sin值)
@@ -24,7 +22,6 @@ xn = [
     (math.pi / 4, 1 / (2 ** 0.5)),  # sin(45°)
     (math.pi / 3, (3 ** 0.5) / 2)  # sin(60°)
 ]
-
 
 def lagrange_one(x, flag):
     """
@@ -43,20 +40,13 @@ def lagrange_one(x, flag):
         插值后的 sin 值。
     """
     if flag == 1:
-<<<<<<< HEAD
         # 使用 xn[0] 和 xn[1] 进行插值
         return ((x - xn[1][0]) / (xn[0][0] - xn[1][0])) * xn[0][1] + \
                ((x - xn[0][0]) / (xn[1][0] - xn[0][0])) * xn[1][1]
     elif flag == 2:
         # 使用 xn[1] 和 xn[2] 进行插值
-=======
-        return ((x - xn[1][0]) / (xn[0][0] - xn[1][0])) * xn[0][1] + \
-               ((x - xn[0][0]) / (xn[1][0] - xn[0][0])) * xn[1][1]
-    elif flag == 2:
->>>>>>> origin/master
         return ((x - xn[2][0]) / (xn[1][0] - xn[2][0])) * xn[1][1] + \
                ((x - xn[1][0]) / (xn[2][0] - xn[1][0])) * xn[2][1]
-
 
 def lagrange_two(x):
     """
@@ -72,17 +62,13 @@ def lagrange_two(x):
     float
         插值后的 sin 值。
     """
-<<<<<<< HEAD
     # 使用 xn[0], xn[1], xn[2] 进行插值
-=======
->>>>>>> origin/master
     return ((x - xn[1][0]) * (x - xn[2][0]) /
             ((xn[0][0] - xn[1][0]) * (xn[0][0] - xn[2][0]))) * xn[0][1] + \
            ((x - xn[0][0]) * (x - xn[2][0]) /
             ((xn[1][0] - xn[0][0]) * (xn[1][0] - xn[2][0]))) * xn[1][1] + \
            ((x - xn[0][0]) * (x - xn[1][0]) /
             ((xn[2][0] - xn[0][0]) * (xn[2][0] - xn[1][0]))) * xn[2][1]
-
 
 def calculate_error(x, estimated_value, flag):
     """
@@ -118,32 +104,18 @@ def calculate_error(x, estimated_value, flag):
     else:
         print(f"误差超出可接受范围: {error}")
 
-
 # 主程序
-<<<<<<< HEAD
 x_input = float(input("请输入需要估算的sin函数的自变量x（以度为单位）: ")) * (math.pi / 180)  # 转换为弧度
 
 # 计算插值值
 lagrange_value_1 = lagrange_one(x_input, 1)  # 使用第一个插值方法
 lagrange_value_2 = lagrange_one(x_input, 2)  # 使用第二个插值方法
-lagrange_value_3 = lagrange_two(x_input)  # 使用第二次拉格朗日插值法
-=======
-x_input = float(input("请输入需要估算的sin函数的自变量x: ")) * (math.pi / 180)
-
-# 计算插值值
-lagrange_value_1 = lagrange_one(x_input, 1)
-lagrange_value_2 = lagrange_one(x_input, 2)
-lagrange_value_3 = lagrange_two(x_input)
->>>>>>> origin/master
+lagrange_value_3 = lagrange_two(x_input)      # 使用第二次拉格朗日插值法
 
 # 输出结果
 print(f'利用x0,x1可推导出sin({x_input * (180 / math.pi)}°)的值为: {lagrange_value_1}')
 print(f'利用x1,x2可推导出sin({x_input * (180 / math.pi)}°)的值为: {lagrange_value_2}')
-<<<<<<< HEAD
 print(f'利用sinx的二次拉格朗日插值计算可推导出sin({x_input * (180 / math.pi)}°)的值为: {lagrange_value_3}')
-=======
-print(f'利用sinx的2次lagrange插值计算可推导出sin({x_input * (180 / math.pi)}°)的值为: {lagrange_value_3}')
->>>>>>> origin/master
 
 # 计算误差
 calculate_error(x_input, lagrange_value_1, 1)
