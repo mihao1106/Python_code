@@ -153,4 +153,4 @@ print("更新后的输出层权重 w_output_1_p1:")
 print(w_output_1_p1)
 print("更新后的输出层权重 w_output_1_p2:")
 print(w_output_1_p2)
-# ...（继续打印其他更新后的权重和偏置）
+# （继续打印其他更新后的权重和偏置）
